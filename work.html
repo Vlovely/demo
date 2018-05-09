@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <script>
+        window.onload = function(){
+            getRem(750,100)
+        };
+        window.onresize = function(){
+            getRem(750,100)
+        };
+        function getRem(pwidth,prem){
+            var html = document.getElementsByTagName("html")[0];
+            var oWidth = document.body.clientWidth || document.documentElement.clientWidth;
+            html.style.fontSize = oWidth/pwidth*prem + "px";
+        }
+    </script>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <!--<meta name="viewport" content="width=1024, user-scalable=no, initial-scale=1.0 "/>-->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background: #ccc;
+        }
+        .header{
+            height: 0.92rem;
+            width: 100%;
+            background: white;
+            line-height: 100%;
+            position: relative;
+        }
+        .text{
+            display: inline-block;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin:auto;
+            position: absolute;
+        }
+        .left{
+            height: 100%;
+        }
+        .left span,.cash .text,.new .text,.shop .text{
+            font-size: 0.32rem;
+        }
+        .center{
+            /*float: left;*/
+            height: 100%;
+            text-align: center;
+        }
+        .center span{
+            font-size: 0.36rem;
+        }
+        .banner{
+            width: 100%;
+            height: 3.5rem;
+            background: #ff0000;
+        }
+        .tab{
+            background: #fff;
+            width: 100%;
+            height: 1.3rem;
+        }
+        .tab_item{
+            width: 20%;
+            height: 100%;
+            float: left;
+        }
+        .cash,.new,.shop{
+            width: 100%;
+            background: #ffffff;
+            margin-top: 0.1rem;
+            padding:0 0.2rem;
+            box-sizing: border-box;
+        }
+        .cash{
+            height: 2.48rem;
+            /*display: flex;*/
+        }
+        .cash_item{
+            float: left;
+            height: 1.6rem;
+            width: 2.2rem;
+            margin-left: 0.1rem;;
+        }
+        .top{
+            width: 100%;
+            height: 0.68rem;
+            position: relative;
+            /*background: pink;*/
+        }
+        .cont{
+            width: 100%;
+            /*background: hotpink;*/
+            background: #ffffff;
+            overflow: hidden;
+        }
+        .cash .cont {
+            width: 100%;
+            /*overflow: hidden;*/
+            height: 1.6rem;
+        }
+        .new{
+            height: 3.06rem;
+        }
+        .new .cont{
+            height: 2.2rem;
+        }
+        .shop li{
+            float: left;
+            /*margin-right: 0.06rem;*/
+            margin-left: 0.1rem;
+            /*background: beige;*/
+            width: 3.5rem;
+            height: 4.24rem;
+            list-style: none;
+        }
+        .shop li:nth-of-type(odd){
+            margin-left: 0;
+        }
+        .bar{
+            width: 100%;
+            position: fixed;
+            height: 0.98rem;
+            bottom: 0;
+            left: 0;
+            background: #ffffff;
+            z-index: 99;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+        }
+        .img_box{
+            width: 3.5rem;
+            height: 3rem;
+        }
+        .shop
+    </style>
+</head>
+<body >
+    <div class="header">
+        <div class="left">
+            <span class="text">　X 关闭</span>
+        </div>
+        <div class="center">
+            <span class="text">商城</span>
+        </div>
+    </div>
+    <div class="banner">
+        <img src="img/banner1.jpg" alt=""/>
+    </div>
+    <div class="tab">
+        <div style="background: blue" class="tab_item"></div>
+        <div style="background: orange" class="tab_item"></div>
+        <div style="background: yellow" class="tab_item"></div>
+        <div style="background: green" class="tab_item"></div>
+        <div style="background: purple" class="tab_item"></div>
+    </div>
+    <div class="cash">
+        <div class="top"></div>
+        <div class="cont">
+            <div class="cash_item">
+                <img src="img/money%20(1).gif" alt=""/>
+            </div>
+            <div class="cash_item">
+                <img src="img/money%20(3).gif" alt=""/>
+            </div>
+            <div class="cash_item">
+                <img src="img/money%20(4).gif" alt=""/>
+            </div>
+        </div>
+    </div>
+    <div class="new">
+        <div class="top"></div>
+        <div class="cont">
+            <img src="img/sy%20(5).gif" alt=""/>
+        </div>
+    </div>
+    <div class="shop">
+        <div class="top"></div>
+        <div class="cont">
+            <ul>
+                <li>
+                    <div class="img_box">
+                        <img src="img/tuijian%20(1).gif" alt=""/>
+                    </div>
+                </li>
+                <li>
+                    <div class="img_box">
+                        <img src="img/tuijian%20(2).gif" alt=""/>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="bar">
+        <div class="list"></div>
+        <div class="list"></div>
+        <div class="list"></div>
+        <div class="list"></div>
+    </div>
+</body>
+</html>
